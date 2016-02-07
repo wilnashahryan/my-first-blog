@@ -3,7 +3,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'',include('blog.urls')),
 ]
 
 #eg: http://www.mysite.com/post/12345/
