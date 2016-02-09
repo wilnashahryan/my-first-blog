@@ -8,19 +8,73 @@
     <title>WILNASHAHRYAN blog</title>
 </head>
 <body>
-    <div class="page-header">
-        {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        {% endif %}
-        <h1><a href="/">WILNASHAHRYAN Blog</a></h1>
+<div class="page-header">
+    {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    {% endif %}
+    <h1><a href="/">WILNASHAHRYAN Blog</a></h1>
+</div>
+
+<div class="menu">
+    <ul>
+        <li><a href="" class="active">Monday</a></li>
+        <li><a href="">Tuesday</a></li>
+        <li><a href="">Wednesday</a></li>
+        <li><a href="">Thursday</a></li>
+        <li><a href="">Friday</a></li>
+        <li><a href="">Saturday</a></li>
+        <li><a href="">Sunday</a></li>
+    </ul>
+</div>
+
+<div class="panels-container">
+  <div class="panel-wrapper">
+    <div class="panel"> <img src="static/images/star.png" alt="themedemic" />
+      <h1>Top 1</h1>
+      <ul>
+        <li class="panel-top"></li>
+        <li class="panel-middle">
+          <p>Doctor Who</p>
+          <a href="#">Read More</a> </li>
+        <li class="panel-bottom"></li>
+      </ul>
     </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
-            </div>
+    <div class="panel"> <img src="static/images/star.png" alt="themedemic" />
+      <h1>Top 2</h1>
+      <ul>
+        <li class="panel-top"></li>
+        <li class="panel-middle">
+          <p>Sherlock</p>
+          <a href="#">Read More</a> </li>
+        <li class="panel-bottom"></li>
+      </ul>
+    </div>
+    <div class="panel"> <img src="static/images/star.png" alt="themedemic" />
+      <h1>Top 3</h1>
+      <ul>
+        <li class="panel-top"></li>
+        <li class="panel-middle">
+          <p>The Walking Dead</p>
+          <a href="#">Read More</a> </li>
+        <li class="panel-bottom"></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div class="content container">
+     <div class="row">
+        <div class="col-md-8">
+        {% block content %}
+        {% endblock %}
         </div>
     </div>
+</div>
 </body>
 </html>
+
+
+
+
+
