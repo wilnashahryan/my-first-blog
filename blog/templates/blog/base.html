@@ -14,7 +14,6 @@
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -27,211 +26,24 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">HOME</a></li>
-        <li><a href="post_new.html">MONDAY</a></li>
-        <li><a href="#Tuesday">TUESDAY</a></li>
-        <li><a href="#Wednesday">WEDNESDAY</a></li>
-        <li><a href="#Thursday">THURSDAY</a></li>
-        <li><a href="#Friday">FRIDAY</a></li>
-        <li><a href="#Saturday">SATURDAY</a></li>
-        <li><a href="#Sunday">SUNDAY</a></li>
+        <li><a href="{% url 'home' %}">HOME</a></li>
+        <li><a href="#top3">TOP 3</a></li>
+        <li><a href="#shows">SHOWS</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#review">REVIEW OF THE DAY</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Carousel -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="static/images/f2.jpg" alt="The Flash" width="1200" height="500">
-        <div class="carousel-caption">
-          <h3>The Flash</h3>
-          <p>"I've spent my whole life searching for the impossible. Never imagining that I would become the impossible"</p>
-        </div>      
-      </div>
-      <div class="item">
-        <img src="static/images/dw2.jpg" alt="Doctor Who" width="1200" height="500">
-        <div class="carousel-caption">
-          <h3>Doctor Who</h3>
-          <p>"My name, my real name, that is not the point. The name I chose is the doctor"</p>
-        </div>      
-      </div>
-      <div class="item">
-        <img src="static/images/sh2.jpg" alt="Sherlock" width="1200" height="500">
-        <div class="carousel-caption">
-          <h3>Sherlock</h3>
-          <p>"The name's Sherlock Holmes and the address is 221B Baker Street"</p>
-        </div>      
-      </div>
-    </div>
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
+<!-- Container (home) -->
+{% block content %}
+{% endblock %}
 
-<!-- Container (The Introduction Section) -->
-<div id="intro" class="container text-center">
-  <h3>MY ADDICTION</h3>
-  <p><em>I love english TV Series.</em></p>
-  <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <br>
-</div>
-
-<!-- Container (The TOP 3 Section) -->
-<div id="top3" class="bg-1">
-  <div class="container">
-    <h3 class="text-center">MY TOP 3</h3>
-    <p class="text-center">These are my TOP 3 tv series.<br>I change my top 3 every year!</p>
-
-    <div class="row text-center">
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="static/images/flash_logo.png" alt="Flash" width="400" height="300">
-          <p><strong>The Flash</strong></p>
-          <p>Networks: The CW</p>
-          <p>Rotten Tomatoes:98%</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">So, WHY?</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="static/images/dw_logo.jpg" alt="New York" width="400" height="300">
-          <p><strong>Doctor Who</strong></p>
-          <p>Networks: BBC</p>
-          <p>Rotten Tomatoes:89%</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">So, WHY?</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="static/images/daredevil_logo.png" alt="San Francisco" width="400" height="300">
-          <p><strong>Daredevil</strong></p>
-          <p>Networks: Netflix</p>
-          <p>Rotten Tomatoes:98%</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">So, WHY?</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
-            </div>
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-              <button type="submit" class="btn btn-block">Pay 
-                <span class="glyphicon glyphicon-ok"></span>
-              </button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
-          </button>
-          <p>Need <a href="#">help?</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container">
-  <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>I'd to hear from you!</em></p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <p>Share with me your favorite!</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>Kuala Lumpur, Malaysia</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>willnashahryan@gmail.com</p>    
-    </div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-      <br>
-      <div class="row">
-        <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
 <footer class="text-center">
-  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
-  <p>Designed by M.E</p> 
+  <p>Designed by wilnashahryan</p> 
 </footer>
 
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-   
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
-  });
-})
-</script>
 </body>
 </html>
-
-
-

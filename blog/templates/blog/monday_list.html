@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div id="showlist" class="bg-2">
+  <div class="container">
+    <h3 class="text-center">MONDAY SHOWS</h3>
+    <br>   
+    {% for show in shows %}
+    <h3>{{ show.title }}</h3>
+    <p>{{ show.network }}</p>
+    {% endfor %}
+  </div>
+</div>
+        
+{% endblock %}
+
+
+  

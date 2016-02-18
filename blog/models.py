@@ -1,19 +1,25 @@
 from django.db import models
-from django.utils import timezone
 
+class Day(models.Model):
+    day = models.CharField(max_length=10)
 
-class Post(models.Model):
-    author = models.ForeignKey('auth.User')
+    def __unicode__(self):
+        return self.day
+
+class Network(models.Model):
+    name = models.CharField(max_length=30)
+    country = models.CharField(max_length=50)
+    website = models.URLField()
+
+    def __unicode__(self):
+        return self.name
+
+class Show(models.Model):
+    day = models.ForeignKey(Day)
     title = models.CharField(max_length=200)
-    text = models.TextField()
-    created_date = models.DateTimeField(
-            default=timezone.now)
-    published_date = models.DateTimeField(
-            blank=True, null=True)
-
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
-
+    network = models.ForeignKey(Network)
+    description = models.TextField()
+    comment = models.CharField(max_length=500)
+    
     def __str__(self):
         return self.title

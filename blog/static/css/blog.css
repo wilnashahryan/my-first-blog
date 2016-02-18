@@ -6,8 +6,9 @@ body {
 h3, h4 {
     margin: 10px 0 30px 0;
     letter-spacing: 10px;      
-    font-size: 20px;
+    font-size: 24px;
     color: #111;
+
 }
 
 .container {
@@ -38,16 +39,39 @@ h3, h4 {
       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
 }
+
+@media screen and (max-width: 600px) {
+    .col-sm-3 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
 .bg-1 {
     background:url(../images/red-bg.png);
     color: #bdbdbd;
 }
 .bg-1 h3 {color: #fff;}
 .bg-1 p {font-style: italic;}
+
+
+.bg-2 h2 {
+    font-size: 19px;
+    color: #303030;
+    font-weight: 400;
+}
+.bg-2 h3 {color: #303030;}
+.bg-2 p {font-style: italic;}
+
 .list-group-item:first-child {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 }
+
 .list-group-item:last-child {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -60,6 +84,10 @@ h3, h4 {
 .thumbnail p {
     margin-top: 15px;
     color: #555;
+}
+.thumbnail img {
+    width: 400px;
+    height: 30%;
 }
 .btn {
     padding: 10px 20px;
@@ -97,26 +125,14 @@ h3, h4 {
 .navbar li a, .navbar .navbar-brand { 
     color: #d5d5d5 !important;
 }
-.navbar-nav li a:hover {
+.navbar-nav li a:hover, .navbar-nav li.active a {
     color: #fff !important;
-}
-.navbar-nav li.active a {
-    color: #fff !important;
-    background-color: #29292c !important;
+    background-color: #29292c !important;   
 }
 .navbar-default .navbar-toggle {
     border-color: transparent;
 }
-.open .dropdown-toggle {
-    color: #fff;
-    background-color: #555 !important;
-}
-.dropdown-menu li a {
-    color: #000 !important;
-}
-.dropdown-menu li a:hover {
-    background-color: red !important;
-}
+
 footer {
     background:url(../images/red-bg.png);
     color: #f5f5f5;
@@ -138,5 +154,15 @@ textarea {
 
 .content {
     margin: auto;
+}
+
+.logo-small {
+    color: #BA0B1D;
+    font-size: 50px;
+}
+
+.logo {
+    color: #BA0B1D;
+    font-size: 100px; 
 }
 

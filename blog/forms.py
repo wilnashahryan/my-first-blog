@@ -1,8 +1,7 @@
 from django import forms
-from .models import Post
+from .models import Show
 
-class PostForm(forms.ModelForm):
+class ShowForm(forms.ModelForm):
 	class Meta:
-		model = Post
-		fields = ('title', 'text',)
-
+		model = Show
+		fields = ('title', 'network', 'description', 'comment')

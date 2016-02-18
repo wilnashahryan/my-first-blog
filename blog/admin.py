@@ -1,4 +1,6 @@
 from django.contrib import admin
-from .models import Post
+from .models import Day, Network, Show
 
-admin.site.register(Post)
+admin.site.register(Day)
+admin.site.register(Network)
+admin.site.register(Show)

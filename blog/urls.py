@@ -2,8 +2,8 @@ from django.conf.urls import include, url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.post_list, name='post_list'),
-    url(r'^post/(?P<pk>[0-9]+)/$',views.post_detail, name='post_detail'),
-    url(r'^post/new/$', views.post_new, name='post_new'),
-    url(r'^post/(?P<pk>[0-9]+)/edit/$', views.post_edit, name='post_edit'),
+    url(r'^$', views.home, name='home'),
+    url(r'^monday/$',views.monday_list, name='monday_list'),
+    #url(r'^shows/new/$', views.show_new, name='show_new'),
+    #url(r'^shows/(?P<pk>[0-9]+)/edit/$', views.show_edit, name='show_edit'),
 ]
